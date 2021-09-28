@@ -1,52 +1,37 @@
 import React from 'react';
-import { useEffect } from "react";
 import styled from "styled-components";
 
-const Residents = ({ data, toggle, className }) => {
+const Voting = ({ data, setOuterSeen, className }) => {
     function handleClose() {
-        toggle();
+        setOuterSeen(false);
     }
 
-    const headers = ["Name", "Height", "Mass", "Skin Color", "Hair Color", "Eye Color", "Birth Year", "Gender"]
+    const headers = ["Planet", "Votes"]
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          }) //just to make it scroll back to top once the new list is rendered
-    })
+    console.log("data from voting", data)
 
     return (
         <div className={className}>
             <div className="modal_content">
-                <h3>Residents</h3>
+                <h3>Voting Statistics</h3>
                 <div className="resData">
                     {headers.map((headerText, index) => <span key={index}>{headerText}</span>)}
                 </div>
-                {data.map((resident, index) => {
-                    return  <div key={index} className="resData">
-                                <span title="Name: ">{resident.name}</span>
-                                <span title="Height: ">{resident.height === "unknown" ? "unknown" : resident.height + " cm"}</span>
-                                <span title="Mass: ">{resident.mass === "unknown" ? "unknown" : resident.mass + " kg"}</span>
-                                <span title="Skin Color: ">{resident.skin_color}</span>
-                                <span title="Hair Color: ">{resident.hair_color === "n/a" ? "unknown" : resident.hair_color}</span>
-                                <span title="Eye Color: ">{resident.eye_color}</span>
-                                <span title="Birth Year: ">{resident.birth_year}</span>
-                                <span title="Gender: ">{resident.gender === "n/a" ? "unknown" : resident.gender}</span>
-                            </div>
-                })}
+                 {Object.keys(data).map((key, index) => (
+                    <div className="resData" key={index}>
+                        <span >{key}</span>  
+                        <span >{data[key]}</span>
+                    </div>
+                    ))
+                } 
                 <i id="closeBtn" onClick={handleClose} className="fas fa-times"></i>
-
-                {/* <span>{data[0].name}</span>
-                <span className="close" onClick={handleClose}>Close</span> */}
             </div>
             
         </div>
     )
 }
 
-const SResidents = styled(Residents)`
+const SVoting = styled(Voting)`
     // display: none;
     position: absolute;
     top: 0;
@@ -174,9 +159,6 @@ const SResidents = styled(Residents)`
                     margin-block-end: 0;
                     margin-block-start: 0;
                 }
-                span::before {
-                    content: attr(title);
-                }
                 
                 
             }
@@ -197,4 +179,5 @@ const SResidents = styled(Residents)`
 
 `
 
-export default SResidents
+export default SVoting
+
