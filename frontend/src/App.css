@@ -22,7 +22,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  
 }
 
 header {
@@ -53,11 +52,11 @@ ul li {
   color: #fffffa;
   margin: 2vh;
   cursor: pointer;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 li:hover {
-  color:#ff312e;
+  color: #ff312e;
 }
 
 a {
@@ -73,12 +72,12 @@ a {
   background-color: transparent;
   border: none;
   padding: 0;
-  transition: color .3s;
+  transition: color 0.3s;
   cursor: pointer;
 }
 
 .logout:hover {
-  color:#ff312e;
+  color: #ff312e;
 }
 
 h1 {
@@ -88,8 +87,7 @@ h1 {
   font-family: "STARWARS";
   font-size: 4em;
   letter-spacing: 0.05em;
-  color: #FFE81F;
-
+  color: #ffe81f;
 }
 
 i {
@@ -97,8 +95,8 @@ i {
   top: 30vh;
   cursor: pointer;
   transform: scale(5);
-  transition: transform .3s;
-  color:#FFE81F;
+  transition: transform 0.3s;
+  color: #ffe81f;
 }
 
 i.disabled {
@@ -108,7 +106,7 @@ i.disabled {
 }
 
 i:hover {
-  transform: scale(6)
+  transform: scale(6);
 }
 
 i:first-of-type {
@@ -141,6 +139,9 @@ footer {
   font-family: "Roboto Mono" monospace;
   color: #fffffa;
 }
+footer span {
+  display: block;
+}
 
 @media screen and (max-width: 1250px) {
   /* footer {
@@ -156,13 +157,11 @@ footer {
     top: 30vh;
     left: 25vh;
   }
-  
+
   i:last-of-type {
     top: 30vh;
     right: 25vh;
   }
-
-
 }
 
 @media screen and (max-width: 800px) {
@@ -188,13 +187,11 @@ footer {
     top: 40vh;
     left: 15vh;
   }
-  
+
   i:last-of-type {
     top: 40vh;
     right: 15vh;
   }
-
-  
 }
 
 @media screen and (max-width: 470px) {
@@ -202,7 +199,7 @@ footer {
     top: 45vh;
     left: 15vh;
   }
-  
+
   i:last-of-type {
     top: 45vh;
     right: 15vh;
@@ -210,24 +207,24 @@ footer {
 }
 
 @media screen and (max-width: 376px) and (max-height: 813px) {
-    h1 {
-      font-size: 2em;
-      max-width: 75%;
-      padding: 1vh;
-    }
-    i {
-      transform: scale(3);
-    }
-    i:hover {
-      transform: scale(3);
-    }
-    i:first-of-type {
-      top: 31vh;
-      left: 10vh;
-    }
-    
-    i:last-of-type {
-      top: 31vh;
-      right: 10vh;
-    }
+  h1 {
+    font-size: 2em;
+    max-width: 75%;
+    padding: 1vh;
+  }
+  i {
+    transform: scale(3);
+  }
+  i:hover {
+    transform: scale(3);
+  }
+  i:first-of-type {
+    top: 31vh;
+    left: 10vh;
+  }
+
+  i:last-of-type {
+    top: 31vh;
+    right: 10vh;
+  }
 }

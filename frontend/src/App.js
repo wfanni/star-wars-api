@@ -94,7 +94,8 @@ export default function App() {
       </Switch>
 
       <footer>
-        <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+        <span>font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</span>
+        <span>background pattern by <a href="https://dribbble.com/erikaserik">Erikas</a></span>
       </footer>
 
     </Router>
